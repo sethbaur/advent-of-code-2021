@@ -1,11 +1,11 @@
-defmodule AdventOfCode.Days.Day1 do
+defmodule AdventOfCode.Days.Day01 do
   def run(:a) do
-    AdventOfCode.load_data("input1.txt")
+    AdventOfCode.load_data("input01.txt")
     |> count_increases()
   end
 
   def run(:b) do
-    AdventOfCode.load_data("input1.txt")
+    AdventOfCode.load_data("input01.txt")
     |> count_increases_in_sliding_window()
   end
 

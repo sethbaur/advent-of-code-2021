@@ -1,6 +1,5 @@
-defmodule Day1Test do
+defmodule Day01Test do
   use ExUnit.Case
-  doctest AdventOfCode
 
   test "calculates number of increases" do
     data = [
@@ -16,7 +15,7 @@ defmodule Day1Test do
       "6"
     ]
 
-    assert {_, 3} = AdventOfCode.Days.Day1.count_increases(data)
+    assert {_, 3} = AdventOfCode.Days.Day01.count_increases(data)
   end
 
   test "calculates number of increases in sliding window" do
@@ -33,6 +32,6 @@ defmodule Day1Test do
       "263"
     ]
 
-    assert {_, 5} = AdventOfCode.Days.Day1.count_increases_in_sliding_window(data)
+    assert {_, 5} = AdventOfCode.Days.Day01.count_increases_in_sliding_window(data)
   end
 end
