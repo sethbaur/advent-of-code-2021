@@ -11,21 +11,14 @@ defmodule AdventOfCode.Days.Day01 do
 
   def count_increases(data) do
     data
-    |> Enum.map(&Integer.parse/1)
+    |> Enum.map(&AdventOfCode.string_to_int/1)
     |> count()
   end
 
   def count_increases_in_sliding_window(data) do
     get = fn idx ->
       Enum.at(data, idx)
-      |> Integer.parse()
-      |> case do
-        {int, _} ->
-          int
-
-        _ ->
-          nil
-      end
+      |> AdventOfCode.string_to_int()
     end
 
     Range.new(0, length(data) - 3)
