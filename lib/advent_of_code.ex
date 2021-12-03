@@ -6,9 +6,9 @@ defmodule AdventOfCode do
     |> Enum.to_list()
   end
 
-  def string_to_int(string) do
+  def string_to_int(string, base \\ 10) do
     string
-    |> Integer.parse()
+    |> Integer.parse(base)
     |> case do
       {int, _} ->
         int
