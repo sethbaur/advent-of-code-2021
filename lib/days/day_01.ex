@@ -41,5 +41,6 @@ defmodule AdventOfCode.Days.Day01 do
             {measurement, increases}
         end
     end)
+    |> elem(1)
   end
 end
