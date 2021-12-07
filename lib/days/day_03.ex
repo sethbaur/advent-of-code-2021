@@ -79,11 +79,9 @@ defmodule AdventOfCode.Days.Day03 do
   def filter_by_common_digit([{<<_::binary-size(0)>>, orig}]), do: orig
 
   def filter_by_common_digit(data) do
-    ones =
-      get_ones(data)
+    ones = get_ones(data)
 
-    zeros =
-      get_zeros(data)
+    zeros = get_zeros(data)
 
     cond do
       length(ones) >= length(zeros) ->
@@ -97,11 +95,9 @@ defmodule AdventOfCode.Days.Day03 do
   def filter_by_least_common_digit([{_, orig}]), do: orig
 
   def filter_by_least_common_digit(data) do
-    ones =
-      get_ones(data)
+    ones = get_ones(data)
 
-    zeros =
-      get_zeros(data)
+    zeros = get_zeros(data)
 
     cond do
       length(ones) >= length(zeros) ->
